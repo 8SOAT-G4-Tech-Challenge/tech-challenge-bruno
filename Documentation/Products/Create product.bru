@@ -1,0 +1,23 @@
+meta {
+  name: Create product
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{BASE_URL}}/products
+  body: multipartForm
+  auth: none
+}
+
+body:multipart-form {
+  name: Frango Coreanosss
+  value: 49.99
+  description: Frango agridoce com gergelim.
+  categoryId: {{PRODUCT_CATEGORY_ID}}
+  images: {{imagePath}}
+}
+
+vars:pre-request {
+  imagePath: https://s184.convertio.me/p/6t5gyDfpp4sIDQtuHa-wug/02101b0b1a3a739797b4c873b562fd3b/frango_coreano.jpeg
+}
