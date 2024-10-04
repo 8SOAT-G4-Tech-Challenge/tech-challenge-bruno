@@ -5,14 +5,14 @@ meta {
 }
 
 get {
-  url: {{BASE_URL}}/orders?status=created
+  url: {{BASE_URL}}/orders?status=received
   body: none
   auth: none
 }
 
 params:query {
-  status: created
-  ~status: received
+  status: received
+  ~status: created
   ~status: preparation
   ~status: ready
   ~status: finished
