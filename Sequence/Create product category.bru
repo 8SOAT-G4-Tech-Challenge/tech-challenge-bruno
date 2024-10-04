@@ -1,0 +1,21 @@
+meta {
+  name: Create product category
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/product-categories
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Snack"
+  }
+}
+
+tests {
+  bru.setEnvVar("S_PRODUCT_CATEGORY_ID", res.body.id);
+}

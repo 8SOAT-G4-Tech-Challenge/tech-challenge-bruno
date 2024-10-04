@@ -1,0 +1,19 @@
+meta {
+  name: Add item to cart
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{BASE_URL}}/order-items/{{S_ORDER_ID}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "productId": "{{S_PRODUCT_ID}}",
+    "quantity": 1,
+    "details": "Sem ketchup"
+  }
+}

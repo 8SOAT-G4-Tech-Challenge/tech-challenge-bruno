@@ -1,0 +1,22 @@
+meta {
+  name: Create product
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{BASE_URL}}/products
+  body: multipartForm
+  auth: none
+}
+
+body:multipart-form {
+  name: Frango Coreano Apimentado
+  value: 49.99
+  description: Frango agridoce com gergelim.
+  categoryId: {{S_PRODUCT_CATEGORY_ID}}
+}
+
+tests {
+  bru.setEnvVar("S_PRODUCT_ID", res.body.id);
+}
