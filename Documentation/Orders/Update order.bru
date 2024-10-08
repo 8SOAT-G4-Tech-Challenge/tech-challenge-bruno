@@ -1,0 +1,25 @@
+meta {
+  name: Update order
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{BASE_URL}}/orders/{{ORDER_ID}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    // OrderStatusEnum = {
+    //   created: 'created',
+    //   received: 'received',
+    //   preparation: 'preparation',
+    //   ready: 'ready',
+    //   finished: 'finished',
+    //   canceled: 'canceled',
+    // }
+    "status": "received"
+  }
+}

@@ -1,0 +1,17 @@
+meta {
+  name: Create payment order
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{BASE_URL}}/payment-orders/make-payment/{{S_ORDER_ID}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "orderId": "{{S_ORDER_ID}}"
+  }
+}
