@@ -1,0 +1,17 @@
+meta {
+  name: Update order to preparation
+  type: http
+  seq: 12
+}
+
+put {
+  url: {{BASE_URL}}/orders/{{S_ORDER_ID}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "status": "preparation"
+  }
+}
