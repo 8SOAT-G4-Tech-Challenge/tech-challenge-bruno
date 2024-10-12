@@ -1,0 +1,25 @@
+meta {
+  name: Process payment notifications for an order
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{BASE_URL}}/payment-orders/process-payment-notifications
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "amount": 100,
+    "caller_id": 9876543,
+    "client_id": 1234567890,
+    "created_at": "2024-10-08 17:10:37",
+    "id": "abcdef123-8ab5-4139-9aa3-abcd123",
+    "state": "FINISHED",
+    "additional_info": {
+      "external_reference": "{{ORDER_ID}}"
+    }
+  }
+}
