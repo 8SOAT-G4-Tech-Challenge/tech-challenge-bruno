@@ -1,0 +1,15 @@
+meta {
+  name: Delete customer
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{BASE_URL}}/customers/
+  body: none
+  auth: none
+}
+
+vars:pre-request {
+  customerId: req.setBody
+}

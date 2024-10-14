@@ -1,0 +1,19 @@
+meta {
+  name: Update product
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{BASE_URL}}/products/{{PRODUCT_ID}}
+  body: multipartForm
+  auth: none
+}
+
+body:multipart-form {
+  name: Frango Coreano
+  value: 48.98
+  description: Frango agridoce com gergelim.
+  categoryId: {{PRODUCT_CATEGORY_ID}}
+  images: @file(/Users/jacksonantunes/Downloads/frango_coreano (1).jpeg|/Users/jacksonantunes/Downloads/frango_coreano.jpeg)
+}

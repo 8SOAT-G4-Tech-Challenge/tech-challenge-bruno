@@ -1,0 +1,15 @@
+meta {
+  name: List customer by ID or CPF
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{BASE_URL}}/customers/property?cpf=12345678901
+  body: none
+  auth: none
+}
+
+params:query {
+  cpf: 12345678901
+}

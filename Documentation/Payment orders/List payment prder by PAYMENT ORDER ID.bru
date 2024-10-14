@@ -1,0 +1,11 @@
+meta {
+  name: List payment prder by PAYMENT ORDER ID
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{BASE_URL}}/payment-orders/{{PAYMENT_ORDER_ID}}
+  body: none
+  auth: none
+}

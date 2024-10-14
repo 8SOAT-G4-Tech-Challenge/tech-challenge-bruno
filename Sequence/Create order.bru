@@ -1,0 +1,21 @@
+meta {
+  name: Create order
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{BASE_URL}}/orders
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "customerId": "{{S_CUSTOMER_ID}}"
+  }
+}
+
+tests {
+  bru.setEnvVar("S_ORDER_ID", res.body.id)
+}

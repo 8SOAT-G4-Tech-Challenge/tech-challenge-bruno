@@ -1,0 +1,23 @@
+meta {
+  name: Create product
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{BASE_URL}}/products
+  body: multipartForm
+  auth: none
+}
+
+body:multipart-form {
+  name: Frango Koreano!!!
+  value: 49.99
+  description: Frango agridoce com gergelim.
+  categoryId: {{PRODUCT_CATEGORY_ID}}
+  images: @file(/Users/jacksonantunes/Downloads/frango_coreano (1).jpeg|/Users/jacksonantunes/Downloads/frango_coreano.jpeg)
+}
+
+tests {
+  bru.setEnvVar("PRODUCT_ID", res.body.id)
+}

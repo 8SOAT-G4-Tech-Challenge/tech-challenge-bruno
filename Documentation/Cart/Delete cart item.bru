@@ -1,0 +1,11 @@
+meta {
+  name: Delete cart item
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{BASE_URL}}/order-items/{{ORDER_ITEM_ID}}
+  body: none
+  auth: none
+}

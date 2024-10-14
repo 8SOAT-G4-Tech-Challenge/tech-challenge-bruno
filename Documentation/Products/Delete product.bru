@@ -1,0 +1,11 @@
+meta {
+  name: Delete product
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{BASE_URL}}/products/{{PRODUCT_ID}}
+  body: none
+  auth: none
+}

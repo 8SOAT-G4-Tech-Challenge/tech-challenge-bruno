@@ -1,0 +1,18 @@
+meta {
+  name: Update cart item
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{BASE_URL}}/order-items/{{ORDER_ITEM_ID}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "quantity": 2,
+    "details": "Sem mostarda"
+  }
+}

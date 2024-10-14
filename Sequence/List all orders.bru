@@ -1,0 +1,20 @@
+meta {
+  name: List all orders
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{BASE_URL}}/orders?status=received
+  body: none
+  auth: none
+}
+
+params:query {
+  status: received
+  ~status: created
+  ~status: preparation
+  ~status: ready
+  ~status: finished
+  ~status: canceled
+}
