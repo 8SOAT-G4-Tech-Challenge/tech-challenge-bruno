@@ -1,0 +1,17 @@
+meta {
+  name: Update product category
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{BASE_URL}}/product-categories/{{PRODUCT_CATEGORY_ID}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Bebida"
+  }
+}
