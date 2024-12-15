@@ -4,8 +4,12 @@ meta {
   seq: 4
 }
 
+headers {
+  Authorization: {{TOKEN}}
+}
+
 put {
-  url: {{BASE_URL}}/products/{{PRODUCT_ID}}
+  url: {{BASE_URL}}/admin/products/{{PRODUCT_ID}}
   body: multipartForm
   auth: none
 }

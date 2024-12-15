@@ -1,19 +1,23 @@
 meta {
   name: List all orders
   type: http
-  seq: 11
+  seq: 13
 }
 
 get {
-  url: {{BASE_URL}}/orders?status=received
+  url: {{BASE_URL}}/admin/orders?status=preparation
   body: none
   auth: none
 }
 
+headers {
+  Authorization: {{TOKEN}}
+}
+
 params:query {
-  status: received
+  status: preparation
+  ~status: received
   ~status: created
-  ~status: preparation
   ~status: ready
   ~status: finished
   ~status: canceled

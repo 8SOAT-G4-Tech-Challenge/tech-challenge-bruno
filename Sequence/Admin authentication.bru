@@ -1,0 +1,22 @@
+meta {
+  name: Admin Authentication
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/auth
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": {{COGNITO_ADMIN_USER_EMAIL}}
+    "password": {{COGNITO_ADMIN_USER_PASSWORD}}
+  }
+}
+
+tests {
+  bru.setEnvVar("S_PRODUCT_ID", res.body.id);
+}

@@ -1,11 +1,11 @@
 meta {
   name: Confirm payment order
   type: http
-  seq: 9
+  seq: 11
 }
 
 post {
-  url: {{BASE_URL}}/payment-orders/process-payment-notifications
+  url: {{BASE_URL}}/totem/payment-orders/process-payment-notifications
   body: json
   auth: none
 }

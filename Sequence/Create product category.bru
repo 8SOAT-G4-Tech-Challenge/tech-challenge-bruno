@@ -1,13 +1,17 @@
 meta {
   name: Create product category
   type: http
-  seq: 1
+  seq: 2
 }
 
 post {
-  url: {{BASE_URL}}/product-categories
+  url: {{BASE_URL}}/admin/product-categories
   body: json
   auth: none
+}
+
+headers {
+  Authorization: {{TOKEN}}
 }
 
 body:json {

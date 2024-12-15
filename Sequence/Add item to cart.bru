@@ -1,11 +1,11 @@
 meta {
   name: Add item to cart
   type: http
-  seq: 5
+  seq: 7
 }
 
 post {
-  url: {{BASE_URL}}/order-items/{{S_ORDER_ID}}
+  url: {{BASE_URL}}/totem/order-items/{{S_ORDER_ID}}
   body: json
   auth: none
 }

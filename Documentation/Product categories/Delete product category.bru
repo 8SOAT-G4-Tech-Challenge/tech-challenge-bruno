@@ -4,8 +4,12 @@ meta {
   seq: 4
 }
 
+headers {
+  Authorization: {{TOKEN}}
+}
+
 delete {
-  url: {{BASE_URL}}/product-categories/{{PRODUCT_CATEGORY_ID}}
+  url: {{BASE_URL}}/admin/product-categories/{{PRODUCT_CATEGORY_ID}}
   body: none
   auth: none
 }
