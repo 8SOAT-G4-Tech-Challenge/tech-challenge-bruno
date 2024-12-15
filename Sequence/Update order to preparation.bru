@@ -1,11 +1,11 @@
 meta {
   name: Update order to preparation
   type: http
-  seq: 12
+  seq: 14
 }
 
 put {
-  url: {{BASE_URL}}/orders/{{S_ORDER_ID}}
+  url: {{BASE_URL}}/totem/orders/{{S_ORDER_ID}}
   body: json
   auth: none
 }

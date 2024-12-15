@@ -1,11 +1,11 @@
 meta {
   name: Create payment order
   type: http
-  seq: 7
+  seq: 9
 }
 
 post {
-  url: {{BASE_URL}}/payment-orders/make-payment/{{S_ORDER_ID}}
+  url: {{BASE_URL}}/totem/payment-orders/make-payment/{{S_ORDER_ID}}
   body: json
   auth: none
 }

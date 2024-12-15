@@ -26,7 +26,7 @@ Para executar qualquer requisição presente e mapeada nos diretórios da coleç
 ### Participantes do Projeto
 
 - Amanda Maschio - RM 357734
-- Jackson Antunes - RM357311
+- Jackson Antunes - RM 357311
 - Lucas Accurcio - RM 357142
 - Vanessa Freitas - RM 357999
 - Winderson Santos - RM 357315

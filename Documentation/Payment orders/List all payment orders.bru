@@ -4,8 +4,12 @@ meta {
   seq: 1
 }
 
+headers {
+  Authorization: {{TOKEN}}
+}
+
 get {
-  url: {{BASE_URL}}/payment-orders
+  url: {{BASE_URL}}/admin/payment-orders
   body: none
   auth: none
 }

@@ -4,8 +4,12 @@ meta {
   seq: 1
 }
 
+headers {
+  Authorization: {{TOKEN}}
+}
+
 get {
-  url: {{BASE_URL}}/users
+  url: {{BASE_URL}}/admin/users
   body: none
   auth: none
 }

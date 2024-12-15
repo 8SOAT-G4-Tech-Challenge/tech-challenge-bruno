@@ -1,11 +1,11 @@
 meta {
-  name: List customer by ID or CPF
+  name: Customer Authentication
   type: http
-  seq: 2
+  seq: 5
 }
 
-get {
-  url: {{BASE_URL}}/totem/customer
+post {
+  url: {{BASE_URL}}/customer
   body: json
   auth: none
 }
@@ -15,4 +15,3 @@ body:json {
     "document": "11122233334"
   }
 }
-

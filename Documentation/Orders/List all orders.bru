@@ -5,9 +5,13 @@ meta {
 }
 
 get {
-  url: {{BASE_URL}}/orders
+  url: {{BASE_URL}}/admin/orders
   body: none
   auth: none
+}
+
+headers {
+  Authorization: {{TOKEN}}
 }
 
 params:query {
