@@ -5,7 +5,12 @@ meta {
 }
 
 get {
-  url: {{BASE_URL}}/totem/orders/{{S_ORDER_ID}}
+  url: {{BASE_URL}}/totem/orders/{{S_ORDER_ID}}?withCustomer=tru&withPayment=true
   body: none
   auth: none
+}
+
+params:query {
+  withCustomer: tru
+  withPayment: true
 }
