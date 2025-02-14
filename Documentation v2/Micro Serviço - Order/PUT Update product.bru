@@ -1,0 +1,19 @@
+meta {
+  name: PUT Update product
+  type: http
+  seq: 8
+}
+
+put {
+  url: {{BASE_URL}}/admin/products/{{PRODUCT_ID}}
+  body: multipartForm
+  auth: none
+}
+
+body:multipart-form {
+  name: Frango Japonês
+  value: 99.99
+  description: Muito bom
+  categoryId: {{PRODUCT_CATEGORY_ID}}
+  images: @file(/Users/jacksonantunes/Desktop/AL5-2780-problema.png)
+}

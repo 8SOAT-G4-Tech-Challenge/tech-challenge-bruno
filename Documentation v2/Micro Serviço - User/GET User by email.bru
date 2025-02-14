@@ -1,0 +1,11 @@
+meta {
+  name: GET User by email
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{BASE_URL_USER}}/admin/users/email/{{USER_EMAIL}}
+  body: none
+  auth: none
+}
