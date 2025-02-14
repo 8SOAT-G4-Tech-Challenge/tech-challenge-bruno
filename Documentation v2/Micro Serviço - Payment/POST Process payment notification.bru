@@ -1,0 +1,11 @@
+meta {
+  name: POST Process payment notification
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{BASE_URL_PAYMENT}}/totem/payment-orders/process-payment-notifications
+  body: none
+  auth: none
+}

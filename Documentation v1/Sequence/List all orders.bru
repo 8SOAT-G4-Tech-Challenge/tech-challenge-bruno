@@ -5,20 +5,20 @@ meta {
 }
 
 get {
-  url: {{BASE_URL}}/admin/orders?status=preparation
+  url: {{BASE_URL}}/admin/orders
   body: none
   auth: none
 }
 
-headers {
-  Authorization: {{TOKEN}}
-}
-
 params:query {
-  status: preparation
+  ~status: preparation
   ~status: received
   ~status: created
   ~status: ready
   ~status: finished
   ~status: canceled
+}
+
+headers {
+  Authorization: {{TOKEN}}
 }

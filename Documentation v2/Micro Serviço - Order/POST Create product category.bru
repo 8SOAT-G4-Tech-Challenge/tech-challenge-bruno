@@ -1,0 +1,29 @@
+meta {
+  name: POST Create product category
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{BASE_URL}}/admin/product-categories
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Snack"
+  }
+}
+
+body:multipart-form {
+  name: Frango Japonês
+  : 99.99
+  description: Muito bom
+  categoryId: {{PRODUCT_CATEGORY_ID}}
+  images: @file(/Users/jacksonantunes/Desktop/AL5-2780-problema.png)
+}
+
+tests {
+  bru.setEnvVar("PRODUCT_CATEGORY_ID", res.body.id);
+}

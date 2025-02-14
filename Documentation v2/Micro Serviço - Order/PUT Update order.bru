@@ -1,0 +1,33 @@
+meta {
+  name: PUT Update order
+  type: http
+  seq: 14
+}
+
+put {
+  url: {{BASE_URL}}/totem/orders/{{ORDER_ID}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    // OrderStatusEnum = {
+    //   created: 'created',
+    //   received: 'received',
+    //   preparation: 'preparation',
+    //   ready: 'ready',
+    //   finished: 'finished',
+    //   canceled: 'canceled',
+    // }
+    "status": "received"
+  }
+}
+
+body:multipart-form {
+  name: Frango Japonês
+  value: 99.99
+  description: Muito bom
+  categoryId: {{PRODUCT_CATEGORY_ID}}
+  images: @file(/Users/jacksonantunes/Desktop/AL5-2780-problema.png)
+}

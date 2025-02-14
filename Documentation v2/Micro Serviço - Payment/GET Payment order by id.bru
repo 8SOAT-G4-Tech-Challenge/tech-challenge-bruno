@@ -1,0 +1,11 @@
+meta {
+  name: GET Payment order by id
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{BASE_URL_PAYMENT}}/totem/payment-orders/{{PAYMENT_ORDER_ID}}
+  body: none
+  auth: none
+}

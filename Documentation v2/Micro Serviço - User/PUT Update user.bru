@@ -1,0 +1,20 @@
+meta {
+  name: PUT Update user
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{BASE_URL_USER}}/admin/users/{{USER_ID}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Jack",
+    "email": "jackson.contato24@hotmail.com",
+    "sessionToken": "20ef167e-b165-4858-9354-274556d03bf8",
+    "isAdmin": true
+  }
+}
