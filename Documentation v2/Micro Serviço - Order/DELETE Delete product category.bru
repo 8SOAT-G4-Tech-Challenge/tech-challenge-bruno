@@ -10,6 +10,10 @@ delete {
   auth: none
 }
 
+headers {
+  Authorization: {{ACCESS_TOKEN}}
+}
+
 body:multipart-form {
   name: Frango Japonês
   value: 99.99
