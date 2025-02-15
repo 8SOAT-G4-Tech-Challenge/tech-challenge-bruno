@@ -1,0 +1,27 @@
+meta {
+  name: POST Create product
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{BASE_URL}}/admin/products
+  body: multipartForm
+  auth: none
+}
+
+headers {
+  Authorization: {{ACCESS_TOKEN}}
+}
+
+body:multipart-form {
+  name: Frango Japonês
+  value: 99.99
+  description: Muito bom
+  categoryId: {{PRODUCT_CATEGORY_ID}}
+  images: @file(/Users/jacksonantunes/Desktop/AL5-2780-problema.png)
+}
+
+tests {
+  bru.setEnvVar("PRODUCT_ID", res.body.id);
+}

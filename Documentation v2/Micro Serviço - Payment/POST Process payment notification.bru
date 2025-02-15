@@ -1,0 +1,22 @@
+meta {
+  name: POST Process payment notification
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{BASE_URL_PAYMENT}}/totem/payment-orders/process-payment-notifications
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "state": "FINISHED",
+    "created_at": "2025-02-15T23:03:45.949Z",
+    "additional_info": {
+      "external_reference": "{{ORDER_ID}}"
+    },
+    "amount": 999
+  }
+}

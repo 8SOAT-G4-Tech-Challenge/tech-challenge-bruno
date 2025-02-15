@@ -1,0 +1,15 @@
+meta {
+  name: GET Customers
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{BASE_URL_USER}}/admin/customers
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: {{ACCESS_TOKEN}}
+}

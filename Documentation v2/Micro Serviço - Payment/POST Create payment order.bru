@@ -1,0 +1,15 @@
+meta {
+  name: POST Create payment order
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{BASE_URL_PAYMENT}}/totem/payment-orders/make-payment/{{ORDER_ID}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {}
+}

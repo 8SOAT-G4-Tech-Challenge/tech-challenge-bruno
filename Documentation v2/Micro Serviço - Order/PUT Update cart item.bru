@@ -1,0 +1,26 @@
+meta {
+  name: PUT Update cart item
+  type: http
+  seq: 19
+}
+
+put {
+  url: {{BASE_URL}}/totem/order-items/{{CART_ITEM_ID}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "quantity": 2,
+    "details": "Sem mostarda"
+  }
+}
+
+body:multipart-form {
+  name: Frango Japonês
+  value: 99.99
+  description: Muito bom
+  categoryId: {{PRODUCT_CATEGORY_ID}}
+  images: @file(/Users/jacksonantunes/Desktop/AL5-2780-problema.png)
+}

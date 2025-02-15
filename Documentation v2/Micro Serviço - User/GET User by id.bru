@@ -1,0 +1,15 @@
+meta {
+  name: GET User by id
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{BASE_URL_USER}}/admin/users/{{USER_ID}}
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: {{ACCESS_TOKEN}}
+}

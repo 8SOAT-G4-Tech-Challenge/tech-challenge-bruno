@@ -1,0 +1,15 @@
+meta {
+  name: DELETE Customer
+  type: http
+  seq: 10
+}
+
+delete {
+  url: {{BASE_URL_USER}}/admin/customers/{{CUSTOMER_ID}}
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: {{ACCESS_TOKEN}}
+}

@@ -1,0 +1,15 @@
+meta {
+  name: GET All orders
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{BASE_URL}}/admin/orders
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: {{ACCESS_TOKEN}}
+}

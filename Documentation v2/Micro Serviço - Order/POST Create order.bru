@@ -1,0 +1,29 @@
+meta {
+  name: POST Create order
+  type: http
+  seq: 13
+}
+
+post {
+  url: {{BASE_URL}}/totem/orders
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "customerId": "{{CUSTOMER_ID}}"
+  }
+}
+
+body:multipart-form {
+  name: Frango Japonês
+  value: 99.99
+  description: Muito bom
+  categoryId: {{PRODUCT_CATEGORY_ID}}
+  images: @file(/Users/jacksonantunes/Desktop/AL5-2780-problema.png)
+}
+
+tests {
+  bru.setEnvVar("ORDER_ID", res.body.id);
+}

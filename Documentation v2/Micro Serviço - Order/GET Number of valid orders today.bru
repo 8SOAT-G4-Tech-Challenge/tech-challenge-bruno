@@ -1,0 +1,11 @@
+meta {
+  name: GET Number of valid orders today
+  type: http
+  seq: 15
+}
+
+get {
+  url: {{BASE_URL}}/totem/orders/valid-orders-today
+  body: none
+  auth: none
+}

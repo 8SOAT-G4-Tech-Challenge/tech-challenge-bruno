@@ -1,0 +1,23 @@
+meta {
+  name: POST Create customer
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{BASE_URL_USER}}/totem/customers
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Winderson Nunes",
+    "email": "wind@eumarketing.net",
+    "cpf": "11111111112"
+  }
+}
+
+tests {
+  bru.setEnvVar("CUSTOMER_ID", res.body.id);
+}

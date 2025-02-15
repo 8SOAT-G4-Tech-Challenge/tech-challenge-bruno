@@ -1,0 +1,15 @@
+meta {
+  name: GET Customer by property
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{BASE_URL_USER}}/totem/customers/property?id={{CUSTOMER_ID}}
+  body: none
+  auth: none
+}
+
+params:query {
+  id: {{CUSTOMER_ID}}
+}

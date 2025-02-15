@@ -1,0 +1,15 @@
+meta {
+  name: GET All payment orders
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{BASE_URL_PAYMENT}}/admin/payment-orders
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: {{ACCESS_TOKEN}}
+}
