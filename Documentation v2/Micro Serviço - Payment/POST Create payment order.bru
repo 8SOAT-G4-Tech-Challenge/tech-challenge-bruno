@@ -6,6 +6,10 @@ meta {
 
 post {
   url: {{BASE_URL_PAYMENT}}/totem/payment-orders/make-payment/{{ORDER_ID}}
-  body: none
+  body: json
   auth: none
+}
+
+body:json {
+  {}
 }

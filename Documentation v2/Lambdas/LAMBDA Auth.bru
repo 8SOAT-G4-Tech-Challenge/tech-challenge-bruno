@@ -1,0 +1,22 @@
+meta {
+  name: LAMBDA Auth
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL_LAMBDA}}/auth
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "jackson.contato24@hotmail.com",
+    "password": "Batata2025!"
+  }
+}
+
+tests {
+  bru.setEnvVar("ACCESS_TOKEN", res.body.tokens.accessToken);
+}
